@@ -7,4 +7,8 @@ public class ElectricMotor {
     public ElectricMotor(Battery battery) {
         this.battery = battery;
     }
+
+    public int getBatteryRange(){
+        return battery.getRange();
+    }
 }
