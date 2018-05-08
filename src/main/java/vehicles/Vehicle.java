@@ -1,6 +1,8 @@
 package vehicles;
 
-public abstract class Vehicle {
+import people.Customer;
+
+public abstract class Vehicle implements Buyable{
 
     private int capacity;
     private double price;
@@ -22,5 +24,12 @@ public abstract class Vehicle {
 
     public String getColour() {
         return colour;
+    }
+
+    public boolean canBuy(Customer customer){
+        if (customer.getMoney() >= this.price){
+            return true;
+        }
+        return false;
     }
 }
